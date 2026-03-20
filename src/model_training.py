@@ -123,7 +123,7 @@ class ModelTraining:
         print("Model Training Completed Successfully")
         print("=" * 60)
         print(f"Best model selected : {best_model_name}")
-        print(f"Best R2 Score       : {best_r2:.4f}")
+        print(f"Best R2 Score       : {best_r2*100:.4f}")
         print(f"Best model saved at : {self.model_path}")
 
 

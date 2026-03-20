@@ -24,7 +24,7 @@ class DataTransformation:
         df = pd.read_csv(self.input_path)
 
         # Keep top 10 property types, rest -> Other
-        top_10_property_types = df["property_type"].value_counts().nlargest(10).index.tolist()
+        top_10_property_types = df["property_type"].value_counts().nlargest(11).index.tolist()
         df["property_type"] = df["property_type"].apply(
             lambda x: x if x in top_10_property_types else "Other"
         )
