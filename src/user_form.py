@@ -42,8 +42,7 @@ def user_form():
 
     # Property type input
     print("\nAvailable Property Types:")
-    print("Apartment, House, Condominium, Townhouse, Loft, Guesthouse,")
-    print("Bed & Breakfast, Bungalow, Villa, Dorm, Other")
+    print("Apartment, House, Condominium, Townhouse, Loft, Guesthouse, Bed & Breakfast, Bungalow, Villa, Dorm, Other")
     prop = input("Enter Property Type: ").strip()
     data["property_type"] = prop
 
@@ -54,8 +53,8 @@ def user_form():
 
     # Accommodation details
     data["accommodates"] = int(input("\nNumber of guests accommodated: "))
-    data["bedrooms"] = int(input("Number of bedrooms: "))
-    data["beds"] = int(input("Number of beds: "))
+    data["bedrooms"] = int(input("\nNumber of bedrooms: "))
+    data["beds"] = int(input("\nNumber of beds: "))
 
     # Bed type input
     print("\nAvailable Bed Types: Airbed, Couch, Futon, Pull-out Sofa, Real Bed")
@@ -75,9 +74,9 @@ def user_form():
 
     # Host-related information
     data["host_response_rate"] = float(input("\nHost response rate (%): "))
-    data["host_years"] = float(input("Host experience (years): "))
-    data["host_identity_verified"] = int(input("Host identity verified? (1 = Yes, 0 = No): "))
-    data["host_has_profile_pic"] = int(input("Host has profile pic? (1 = Yes, 0 = No): "))
+    data["host_years"] = float(input("\nHost experience (years): "))
+    data["host_identity_verified"] = int(input("\nHost identity verified? (1 = Yes, 0 = No): "))
+    data["host_has_profile_pic"] = int(input("\nHost has profile pic? (1 = Yes, 0 = No): "))
 
     # Cancellation policy input
     print("\nAvailable Cancellation Policies: Flexible, Moderate, Strict, Super_strict_30, Super_strict_60")
@@ -90,7 +89,7 @@ def user_form():
 
     # Review details
     data["number_of_reviews"] = int(input("\nMinimum Number of reviews: "))
-    data["review_scores_rating"] = float(input("Minimum Review score rating: "))
+    data["review_scores_rating"] = float(input("\nMinimum Review score rating: "))
 
     print("\nUser input collected successfully.")
     return data, no_nights
