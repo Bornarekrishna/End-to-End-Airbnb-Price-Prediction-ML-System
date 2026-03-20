@@ -208,8 +208,5 @@ __marimo__/
 
 __pycache__/
 *.pyc
-*.pkl
-*.csv
-artifacts/
 mlruns/
 .env
