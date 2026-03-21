@@ -69,10 +69,16 @@ class PredictPipeline:
         # Calculate total price for user-entered nights
         total_price = nightly_price * number_of_nights
 
+        # Create price range (±10%)
+        lower_price = nightly_price * 0.9
+        upper_price = nightly_price * 1.1
+
+
         print("Prediction generated successfully.")
 
         return {
-            "nightly_price": round(nightly_price, 2),
-            "number_of_nights": int(number_of_nights),
-            "total_price": round(total_price, 2)
-        }
+        "nightly_price": round(nightly_price, 2),
+        "lower_price": round(lower_price, 2),
+        "upper_price": round(upper_price, 2),
+        "number_of_nights": int(number_of_nights),
+        "total_price": round(total_price, 2)}

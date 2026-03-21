@@ -18,7 +18,8 @@ if "input_data" not in st.session_state:
 data = st.session_state["input_data"]
 nights = st.session_state["nights"]
 
-result = pipeline.predict_price(data, nights)
+with st.spinner("🔍 Predicting best price for you..."):
+    result = pipeline.predict_price(data, nights)
 
 st.markdown("---")
 
@@ -30,7 +31,21 @@ with col1:
 with col2:
     st.metric("🧾 Total Price", f"${result['total_price']}")
 
+st.markdown(
+    f"### 📊 Estimated Price Range: "
+    f"**{result['lower_price']} - {result['upper_price']}**"
+)
+
 st.info(f"📅 For {result['number_of_nights']} nights")
+
+st.markdown("### 📍 Location Preview")
+
+map_data = {
+    "lat": [data["latitude"]],
+    "lon": [data["longitude"]]
+}
+
+st.map(map_data)
 
 st.success("🙏 Thank you for using our Airbnb Price Prediction App!")
 

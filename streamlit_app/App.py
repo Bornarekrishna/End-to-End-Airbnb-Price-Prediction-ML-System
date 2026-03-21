@@ -153,7 +153,7 @@ with st.form("prediction_form"):
 if submit_button:
     st.session_state["input_data"] = input_data
     st.session_state["nights"] = number_of_nights
-    st.switch_page("pages/2_Prediction.py")
+    st.switch_page("pages/2_Result.py")
 
 st.markdown("</div>", unsafe_allow_html=True)
 
