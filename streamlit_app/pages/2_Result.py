@@ -57,4 +57,4 @@ st.warning("""
     """)
 
 if st.button("⬅️ Back"):
-    st.switch_page("app.py")
+    st.switch_page("App.py")
