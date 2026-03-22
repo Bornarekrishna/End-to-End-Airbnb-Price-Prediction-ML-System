@@ -1,5 +1,3 @@
-# End-to-End-Airbnb-Price-Prediction-ML-System
-
 # 🏠 Airbnb Price Prediction System
 
 An end-to-end Machine Learning project that predicts Airbnb listing prices based on property details, location, amenities, and host characteristics. The system is deployed as an interactive Streamlit web application with real-time predictions.
@@ -186,21 +184,49 @@ This project provides a complete pipeline from raw data to a deployed applicatio
 
 ---
 
-# 📸 Screenshots
+# Screenshots
 
-### 🏠 Home Page
-![Home](assets/home.png)
+### Home Page
+![Home](assets/home_page.png)
 
-### 📝 Input Form
-![Form](assets/form.png)
+### Input Form
+![Form](assets/user_form.png)
 
-### 🎉 Prediction Result
+### Prediction Result
 ![Result](assets/result.png)
 
-### 📍 Map View
-![Map](assets/map.png)
+### AWS EC2 Instance
+![AWS](assets/ec2.png)
 
+### AWS EC2 Connection
+![AWS](assets/cli.png)
 ---
 
----
+# Tech Stack
 
+| Category               |Tools |
+|------------------------|----------|
+| Programming            | Python  |
+| ML Libraries           | Scikit-learn, XGBoost  |
+| Data Processing        | Pandas, NumPy  |
+| Data Visualization     | Matplotlib, Streamlit  |
+| Web App                | Streamlit  |
+| Development Platform   | VS Code  |
+| Deployment Platform    | AWS |
+| Version Control        | Git & GitHub |
+
+
+---
+# How to Run
+
+```bash
+git clone https://github.com/Bornarekrishna/End-to-End-Airbnb-Price-Prediction-ML-System.git
+cd End-to-End-Airbnb-Price-Prediction-ML-System
+pip install -r requirements.txt
+streamlit run streamlit_app/App.py
+
+```
+---
+### ⚠️ Disclaimer
+This model provides estimated prices based on historical data and has ~72% accuracy.  
+Actual prices may vary due to market conditions.
